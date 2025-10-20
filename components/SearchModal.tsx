@@ -41,7 +41,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
   return (
     <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-start justify-center pt-20" onClick={onClose}>
       <div 
-        className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 w-full max-w-md mx-4 shadow-2xl"
+        className="bg-slate-900 border border-white/20 rounded-2xl p-8 w-full max-w-md mx-4 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         <form onSubmit={handleSearch} className="space-y-4">

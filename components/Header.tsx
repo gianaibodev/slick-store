@@ -201,7 +201,7 @@ export default function Header() {
       {/* Mobile Modal Menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden fixed inset-0 z-50 bg-black bg-opacity-50" onClick={() => setIsMobileMenuOpen(false)}>
-          <div className="fixed top-16 sm:top-20 left-0 right-0 bg-white/10 backdrop-blur-lg border-b border-white/20 shadow-xl" onClick={(e) => e.stopPropagation()}>
+          <div className="fixed top-16 sm:top-20 left-0 right-0 bg-slate-900 border-b border-white/20 shadow-xl" onClick={(e) => e.stopPropagation()}>
             <div className="px-6 py-6 space-y-4">
               <Link 
                 href="/products" 
