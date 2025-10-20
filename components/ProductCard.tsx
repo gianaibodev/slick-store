@@ -57,7 +57,8 @@ export default function ProductCard({ name, price, slug, imageUrl }: ProductCard
         name: name,
         price: priceNumber,
         size: 9, // Default size
-        slug: slug
+        slug: slug,
+        imageUrl: getProductImage(slug)
       })
       
       // Show success feedback

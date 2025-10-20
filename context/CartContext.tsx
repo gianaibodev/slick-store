@@ -9,6 +9,7 @@ interface CartItem {
   size: number
   quantity: number
   slug: string
+  imageUrl?: string
 }
 
 interface CartContextType {

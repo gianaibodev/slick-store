@@ -15,6 +15,7 @@ interface CartItem {
   size: number
   quantity: number
   slug: string
+  imageUrl?: string
 }
 
 export default function CheckoutPage() {
@@ -225,7 +226,7 @@ export default function CheckoutPage() {
                       <div className="flex items-center space-x-4">
                         <div className="w-16 h-16 bg-gray-200 rounded-xl overflow-hidden">
                           <img 
-                            src={`https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80`}
+                            src={item.imageUrl || `https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80`}
                             alt={item.name}
                             className="w-full h-full object-cover"
                           />
