@@ -43,6 +43,7 @@ export default async function ProductsPage() {
                 name={product.name}
                 price={`₱${product.price.toLocaleString()}`}
                 slug={product.slug}
+                imageUrl={(product as any).image_url}
               />
             ))}
           </div>

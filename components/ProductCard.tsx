@@ -8,9 +8,10 @@ interface ProductCardProps {
   name: string
   price: string
   slug: string
+  imageUrl?: string
 }
 
-export default function ProductCard({ name, price, slug }: ProductCardProps) {
+export default function ProductCard({ name, price, slug, imageUrl }: ProductCardProps) {
   const [isWishlisted, setIsWishlisted] = useState(false)
   const [isAddingToCart, setIsAddingToCart] = useState(false)
   const [showSuccess, setShowSuccess] = useState(false)
@@ -24,7 +25,7 @@ export default function ProductCard({ name, price, slug }: ProductCardProps) {
     // CartProvider not available, addItem will be null
   }
 
-  // Use consistent product images based on slug
+  // Use uploaded image when available; otherwise fall back to consistent demo images by slug
   const getProductImage = (slug: string) => {
     const imageMap: { [key: string]: string } = {
       'slick-runner-v1': 'https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
@@ -32,6 +33,7 @@ export default function ProductCard({ name, price, slug }: ProductCardProps) {
       'slick-classic': 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       'slick-pro': 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     }
+    if (imageUrl && imageUrl.length > 0) return imageUrl
     return imageMap[slug] || 'https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
   }
 
