@@ -148,7 +148,7 @@ export default function AdminNewProductPage() {
                   type="text"
                   value={formData.name}
                   onChange={(e) => handleInputChange('name', e.target.value)}
-                  className="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                  className="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-slate-900 placeholder-slate-500"
                   placeholder="Slick Runner V1"
                   required
                 />
@@ -161,7 +161,7 @@ export default function AdminNewProductPage() {
                   type="text"
                   value={formData.slug}
                   onChange={(e) => handleInputChange('slug', e.target.value)}
-                  className="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                  className="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-slate-900 placeholder-slate-500"
                   placeholder="slick-runner-v1"
                   required
                 />
@@ -174,7 +174,7 @@ export default function AdminNewProductPage() {
                   value={formData.description}
                   onChange={(e) => handleInputChange('description', e.target.value)}
                   rows={4}
-                  className="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                  className="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-slate-900 placeholder-slate-500"
                   placeholder="A brief description of the product..."
                   required
                 />
@@ -190,7 +190,7 @@ export default function AdminNewProductPage() {
                     value={formData.price}
                     onChange={(e) => handleInputChange('price', parseFloat(e.target.value))}
                     step="0.01"
-                    className="w-full p-4 pl-8 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    className="w-full p-4 pl-8 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-slate-900 placeholder-slate-500"
                     placeholder="199.00"
                     required
                   />
@@ -204,7 +204,7 @@ export default function AdminNewProductPage() {
                   type="text"
                   value={formData.brand}
                   onChange={(e) => handleInputChange('brand', e.target.value)}
-                  className="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                  className="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-slate-900 placeholder-slate-500"
                   placeholder="Slick"
                   required
                 />
@@ -216,7 +216,7 @@ export default function AdminNewProductPage() {
                 <select
                   value={formData.status}
                   onChange={(e) => handleInputChange('status', e.target.value)}
-                  className="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                  className="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-slate-900"
                 >
                   <option value="draft">Draft</option>
                   <option value="active">Active</option>
@@ -252,7 +252,7 @@ export default function AdminNewProductPage() {
                         type="text"
                         value={variant.size}
                         onChange={(e) => handleVariantUpdate(index, 'size', e.target.value)}
-                        className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-slate-900 placeholder-slate-500"
                         placeholder="9"
                       />
                     </div>
@@ -264,7 +264,7 @@ export default function AdminNewProductPage() {
                         type="number"
                         value={variant.stock}
                         onChange={(e) => handleVariantUpdate(index, 'stock', parseInt(e.target.value))}
-                        className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-slate-900 placeholder-slate-500"
                         placeholder="10"
                       />
                     </div>

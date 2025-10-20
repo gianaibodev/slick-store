@@ -270,7 +270,7 @@ export default function EditProductPage({ params }: EditProductPageProps) {
                   type="text"
                   value={product.name}
                   onChange={(e) => setProduct({ ...product, name: e.target.value })}
-                  className="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                  className="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-slate-900 placeholder-slate-500"
                   required
                 />
               </div>
@@ -282,7 +282,7 @@ export default function EditProductPage({ params }: EditProductPageProps) {
                   type="text"
                   value={product.slug}
                   onChange={(e) => setProduct({ ...product, slug: e.target.value })}
-                  className="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                  className="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-slate-900 placeholder-slate-500"
                   required
                 />
               </div>
@@ -294,7 +294,7 @@ export default function EditProductPage({ params }: EditProductPageProps) {
                   value={product.description}
                   onChange={(e) => setProduct({ ...product, description: e.target.value })}
                   rows={4}
-                  className="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                  className="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-slate-900 placeholder-slate-500"
                   required
                 />
               </div>
@@ -309,7 +309,7 @@ export default function EditProductPage({ params }: EditProductPageProps) {
                     value={product.price}
                     onChange={(e) => setProduct({ ...product, price: parseFloat(e.target.value) })}
                     step="0.01"
-                    className="w-full p-4 pl-8 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    className="w-full p-4 pl-8 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-slate-900 placeholder-slate-500"
                     required
                   />
                 </div>
@@ -322,7 +322,7 @@ export default function EditProductPage({ params }: EditProductPageProps) {
                   type="text"
                   value={product.brand}
                   onChange={(e) => setProduct({ ...product, brand: e.target.value })}
-                  className="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                  className="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-slate-900 placeholder-slate-500"
                   required
                 />
               </div>
@@ -333,7 +333,7 @@ export default function EditProductPage({ params }: EditProductPageProps) {
                 <select
                   value={product.status}
                   onChange={(e) => setProduct({ ...product, status: e.target.value })}
-                  className="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                  className="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-slate-900"
                 >
                   <option value="draft">Draft</option>
                   <option value="active">Active</option>
@@ -369,7 +369,7 @@ export default function EditProductPage({ params }: EditProductPageProps) {
                         type="text"
                         value={variant.size}
                         onChange={(e) => handleVariantUpdate(index, 'size', e.target.value)}
-                        className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-slate-900 placeholder-slate-500"
                         placeholder="9"
                       />
                     </div>
@@ -382,7 +382,7 @@ export default function EditProductPage({ params }: EditProductPageProps) {
                         min="0"
                         value={variant.stock}
                         onChange={(e) => handleVariantUpdate(index, 'stock', Math.max(0, parseInt(e.target.value) || 0))}
-                        className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-slate-900 placeholder-slate-500"
                         placeholder="10"
                       />
                     </div>
