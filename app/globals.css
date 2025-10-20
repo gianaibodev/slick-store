@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Royal Bright Blue scale used across the site */
+  --color-royal-50: #f0f9ff;
+  --color-royal-100: #e0f2fe;
+  --color-royal-200: #bae6fd;
+  --color-royal-300: #7dd3fc;
+  --color-royal-400: #38bdf8;
+  --color-royal-500: #2DA0ED; /* primary royal */
+  --color-royal-600: #0284c7;
+  --color-royal-700: #0369a1;
+  --color-royal-800: #075985;
+  --color-royal-900: #0c4a6e;
+}
+
+body {
+  @apply bg-royal-500/20 text-white;
+  font-family: 'Inter', sans-serif;
+  font-feature-settings: 'kern' 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
