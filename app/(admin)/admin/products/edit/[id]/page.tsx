@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
+import ImageUpload from '@/components/ImageUpload'
 
 interface Product {
   id: string
@@ -339,16 +340,10 @@ export default function EditProductPage({ params }: EditProductPageProps) {
                   <option value="inactive">Inactive</option>
                 </select>
               </div>
-              <div>
-                <label className="block text-sm font-semibold text-slate-700 mb-2">
-                  Image URL
-                </label>
-                <input
-                  type="url"
-                  value={product.image_url || ''}
-                  onChange={(e) => setProduct({ ...product, image_url: e.target.value })}
-                  className="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                  placeholder="https://example.com/image.jpg"
+              <div className="md:col-span-2">
+                <ImageUpload
+                  onImageUploaded={(url) => setProduct({ ...product, image_url: url })}
+                  currentImageUrl={product.image_url || ''}
                 />
               </div>
             </div>

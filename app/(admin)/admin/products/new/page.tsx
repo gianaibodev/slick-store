@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
+import ImageUpload from '@/components/ImageUpload'
 
 interface ProductVariant {
   size: string
@@ -222,16 +223,10 @@ export default function AdminNewProductPage() {
                   <option value="inactive">Inactive</option>
                 </select>
               </div>
-              <div>
-                <label className="block text-sm font-semibold text-slate-700 mb-2">
-                  Image URL
-                </label>
-                <input
-                  type="url"
-                  value={formData.image_url}
-                  onChange={(e) => handleInputChange('image_url', e.target.value)}
-                  className="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                  placeholder="https://example.com/image.jpg"
+              <div className="md:col-span-2">
+                <ImageUpload
+                  onImageUploaded={(url) => handleInputChange('image_url', url)}
+                  currentImageUrl={formData.image_url}
                 />
               </div>
             </div>
