@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useParams } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 import ImageUpload from '@/components/ImageUpload'
 
@@ -21,26 +21,15 @@ interface Product {
   }>
 }
 
-interface EditProductPageProps {
-  params: Promise<{
-    id: string
-  }>
-}
-
-export default function EditProductPage({ params }: EditProductPageProps) {
-  const [id, setId] = useState<string>('')
+export default function EditProductPage() {
+  const params = useParams()
+  const id = (params?.id as string) || ''
   const router = useRouter()
   const [product, setProduct] = useState<Product | null>(null)
   const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
-
-  useEffect(() => {
-    params.then(({ id: productId }) => {
-      setId(productId)
-    })
-  }, [params])
 
   useEffect(() => {
     if (id) {
